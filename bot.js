@@ -118,10 +118,9 @@ var ApL = `${Math.round(client.ping)}`
  });
 
 
-
+  const fs = require('fs'); // npm i fs
 const ms = require('ms'); // npm i ms
 const cool = [];
-
 client.on('message',async message => {
   if(message.author.bot) return;
   if(message.channel.type === 'dm') return;
@@ -133,7 +132,7 @@ client.on('message',async message => {
   const mentionn = message.mentions.users.first() || client.users.get(args[1]);
   const author = message.author.id;
   const balance = args[2];
-  const daily = Math.floor(Math.random() * 99990)  + 100000;
+  const daily = Math.floor(Math.random() * 350) + 10;
  
   if(!credits[author]) credits[author] = {credits: 50};
   if(!credits[mention.id]) credits[mention.id] = {credits: 50};
@@ -172,7 +171,7 @@ client.on('message',async message => {
   }
   if(!args[2]) {
     if(mention.bot) return message.channel.send(`**:heavy_multiplication_x:| ${message.content.split(' ')[1]} لم يتم العثور على**`);
-    message.channel.send(`**${mention.username}, your :credit_card: balance is   **__**${credits[mention.id].credits}**__` );
+    message.channel.send(`**${mention.username}, your :credit_card: balance is **${credits[mention.id].credits}`);
   }
  
   }
@@ -220,9 +219,6 @@ client.on('message',async message => {
 
 
 
-
-
-
 client.on('ready', () => {
    console.log(`----------------`);
       console.log(`Cyhper Script By : ESDream`);
@@ -230,7 +226,7 @@ client.on('ready', () => {
       console.log(`ON ${client.guilds.size} Servers '     Script By : ESDream ' `);
     console.log(`----------------`);
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(`=credit`,"https://www.twitch.tv/idk")
+client.user.setGame(`c=credit`,"https://www.twitch.tv/idk")
 client.user.setStatus("online")
 });
 
