@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
-var prefix = "c=";
+var prefix = "=";
 client.on('message', message => {
     if (message.content == "=سرعهtt") {
         var x = ["DreamKing",
@@ -226,7 +226,7 @@ client.on('ready', () => {
       console.log(`ON ${client.guilds.size} Servers '     Script By : ESDream ' `);
     console.log(`----------------`);
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(`c=credit`,"https://www.twitch.tv/idk")
+client.user.setGame(`=credit`,"https://www.twitch.tv/idk")
 client.user.setStatus("online")
 });
 
