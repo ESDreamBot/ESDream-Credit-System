@@ -120,10 +120,6 @@ var ApL = `${Math.round(client.ping)}`
 
 
 
-
-const ms = require('ms'); // npm i ms
-const cool = [];
-
 client.on('message',async message => {
   if(message.author.bot) return;
   if(message.channel.type === 'dm') return;
