@@ -117,7 +117,7 @@ client.on('ready', () => {
       console.log(`ON ${client.guilds.size} Servers '     Script By : ESDream ' `);
     console.log(`----------------`);
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(`=credit`,"PLAYING")
+client.user.setGame(`=credit`,"https://www.twitch.tv/idk")
 client.user.setStatus("online")
 });
 
