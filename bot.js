@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
-var prefix = "=";
+var prefix = "c=";
 client.on('message', message => {
     if (message.content == "=سرعهtt") {
         var x = ["DreamKing",
@@ -119,6 +119,8 @@ var ApL = `${Math.round(client.ping)}`
 
 
 
+const ms = require('ms'); // npm i ms
+const cool = [];
 
 client.on('message',async message => {
   if(message.author.bot) return;
