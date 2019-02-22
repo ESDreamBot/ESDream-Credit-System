@@ -132,7 +132,7 @@ client.on('message',async message => {
   const mentionn = message.mentions.users.first() || client.users.get(args[1]);
   const author = message.author.id;
   const balance = args[2];
-  const daily = Math.floor(Math.random() * 350) + 10;
+  const daily = Math.floor(Math.random() * 100000) + 10000;
  
   if(!credits[author]) credits[author] = {credits: 50};
   if(!credits[mention.id]) credits[mention.id] = {credits: 50};
@@ -212,6 +212,14 @@ client.on('message',async message => {
       cool.shift(message.author.id);
       message.author.send("**:atm: | \`Daily\`, يمكنك الحصول على الكردت المجانية الان**").catch();
     }, ms("1d"));
+  }
+});
+
+
+
+client.on('message', msg => {
+  if (msg.content === '=invite') {
+    msg.reply(', https://discordapp.com/oauth2/authorize?client_id=548400014938996737&permissions=0&scope=bot');
   }
 });
 
