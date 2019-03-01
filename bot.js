@@ -154,7 +154,7 @@ client.on('message',async message => {
  
     var number = `${one}${two}${three}${four}`;
    
-    message.channel.send(`**:heavy_dollar_sign:| \`${number}\`, أكتب الرقم للأستمرار**`).then(m => {
+    message.channel.send(`**:heavy_dollar_sign:| \`${number}\`, أكتب الرقم للأستمرار :pencil: **`).then(m => {
       message.channel.awaitMessages(m => m.author.id === message.author.id, {max: 1, time: 10000}).then(c => {
         if(c.first().content === number) {
           m.delete();
@@ -171,7 +171,7 @@ client.on('message',async message => {
   }
   if(!args[2]) {
     if(mention.bot) return message.channel.send(`**:heavy_multiplication_x:| ${message.content.split(' ')[1]} لم يتم العثور على**`);
-    message.channel.send(`**${mention.username}, your :credit_card: balance is **__**$${credits[mention.id].credits}**__`);
+    message.channel.send(`**${mention.username}, your :credit_card: balance is **__**$$:dollar: {credits[mention.id].credits}**__`);
   }
  
   }
