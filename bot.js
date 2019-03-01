@@ -225,6 +225,16 @@ client.on('message', msg => {
 
 
 
+client.on('ready', () => {
+  client.user.setPresence('dnd')
+  client.user.setActivity(`=credit | =daily  - Servers: ${client.guilds.size} | Version: 1.0.0`)
+  console.log(' Logged in as community Bot ')
+});
+
+	
+	
+	
+
 
 
 client.on('ready', () => {
@@ -234,7 +244,7 @@ client.on('ready', () => {
       console.log(`ON ${client.guilds.size} Servers '     Script By : ESDream ' `);
     console.log(`----------------`);
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(`=credit`,"https://www.twitch.tv/idk")
+client.user.setGame(`=credit`,"PLAYING")
 client.user.setStatus("online")
 });
 
